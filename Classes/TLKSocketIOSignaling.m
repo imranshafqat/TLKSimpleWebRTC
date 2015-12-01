@@ -393,7 +393,7 @@
     
     if ([dictionary[@"type"] isEqualToString:@"iceFailed"]) {
     
-        [[[UIAlertView alloc] initWithTitle:@"Connection Failed" message:@"Talky could not establish a connection to a participant in this chat. Please try again later." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Connection Failed" message:@"We could not establish a connection to a participant in this chat. Please try again later." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil] show];
     
     } else if ([dictionary[@"type"] isEqualToString:@"candidate"]) {
         
@@ -502,7 +502,7 @@
                                @"type": @"iceFailed"};
         NSError *error = nil;
         [self.socket emit:@"message" args:@[args] error:&error];
-        [[[UIAlertView alloc] initWithTitle:@"Connection Failed" message:@"Talky could not establish a connection to a participant in this chat. Please try again later." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Connection Failed" message:@"We could not establish a connection to a participant in this chat. Please try again later." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil] show];
     }
 }
 
